@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: 
+        "profile intro"
+        "hobbies aspirations";
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    grid-area: profile;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-image: url('../assets/profile-placeholder.svg');
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.intro {
+    grid-area: intro;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.hobbies, .aspirations {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.hobbies {
+    grid-area: hobbies;
+}
+
+.aspirations {
+    grid-area: aspirations;
+}
+
+@media (max-width: 768px) {
+    body {
+        grid-template-areas: 
+            "profile"
+            "intro"
+            "hobbies"
+            "aspirations";
+        grid-template-columns: 1fr;
+    }
+}
